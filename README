@@ -1,0 +1,38 @@
+Portage-Wexel
+=============
+
+This is an Overlay of my general packages for Gentoo.
+
+
+Using Layman:
+
+Add 
+ https://raw.github.com/Weuxel/portage-weuxel/master/metadata/weuxel.xml
+to the /etc/layman/layman.cfg overlays section.
+
+Example:
+ overlays  : http://www.gentoo.org/proj/en/overlays/repositories.xml
+             https://raw.github.com/Weuxel/portage-weuxel/master/metadata/weuxel.xml
+
+Now add the repository
+ layman -a weuxel
+For future update of the repository use 
+ layman -S to sync all repositories or
+ layman -s weuxel to sync the weuxel repository
+
+
+Using local repository:
+
+Example usage:
+
+ cd /usr/local/
+ mkdir portage
+ cd portage
+ git clone git://github.com/Weuxel/portage-weuxel.git
+
+Now add the following line to /etc/make.conf
+ PORTDIR_OVERLAY="/usr/local/portage/portage-weuxel"
+
+
+Please report problems to devel at smash-net.org
+
