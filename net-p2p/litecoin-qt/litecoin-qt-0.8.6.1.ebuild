@@ -134,6 +134,10 @@ update_caches() {
 
 pkg_postinst() {
 	update_caches
+
+	echo
+	ewarn "Please read the upgrade instructions for this version here:"
+	ewarn "https://litecoin.info/Upgrading_Litecoin#Upgrading_to_0.8.6.1"
 }
 
 pkg_postrm() {
