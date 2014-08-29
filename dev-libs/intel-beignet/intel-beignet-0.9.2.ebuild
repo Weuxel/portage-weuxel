@@ -11,15 +11,14 @@ HOMEPAGE="http://wiki.freedesktop.org/www/Software/Beignet/"
 
 # we cannot use the snapshots as the checksum changes for every download
 EGIT_REPO_URI="git://anongit.freedesktop.org/beignet"
-EGIT_COMMIT="Release_v${PV}"
+EGIT_COMMIT="39c8a4331dcf6319664d657bb8b3584bf7f934ad"
 
 LICENSE="GPL-2"
 SLOT="0"
-IUSE="icd"
+IUSE=""
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=">=sys-devel/gcc-4.6
-	icd? ( dev-libs/ocl-icd )"
+DEPEND=">=sys-devel/gcc-4.6"
 RDEPEND="
 	app-admin/eselect-opencl
 	media-libs/mesa
