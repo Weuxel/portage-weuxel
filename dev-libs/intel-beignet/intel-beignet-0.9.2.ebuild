@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit cmake-utils git-2
+inherit cmake-utils git-2 python
 
 DESCRIPTION="The Beignet GPGPU System for Intel Ivybridge GPUs"
 HOMEPAGE="http://wiki.freedesktop.org/www/Software/Beignet/"
@@ -16,12 +16,7 @@ EGIT_COMMIT="Release_v${PV}"
 LICENSE="GPL-2"
 SLOT="0"
 IUSE="icd"
-
-if [[ "${PV}" == "9999" ]]; then
-	KEYWORDS=""
-else
-	KEYWORDS="~amd64 ~x86"
-fi
+KEYWORDS="~amd64 ~x86"
 
 DEPEND=">=sys-devel/gcc-4.6
 	icd? ( dev-libs/ocl-icd )"
@@ -32,8 +27,11 @@ RDEPEND="
 	>=sys-devel/llvm-3.1
 	x11-libs/libdrm
 	x11-libs/libXext
-	x11-libs/libXfixes
-	"
+	x11-libs/libXfixes"
+
+pkg_setup() {
+    python_set_active_version 2
+	}
 
 src_prepare() {
 	# disable tests for now
