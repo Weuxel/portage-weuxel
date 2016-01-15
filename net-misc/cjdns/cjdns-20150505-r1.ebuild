@@ -10,7 +10,7 @@ inherit eutils git-r3 linux-info systemd python-single-r1 flag-o-matic
 
 
 DESCRIPTION="Encrypted networking for regular people."
-HOMEPAGE="https://github.com/jdelisle/cjdns"
+HOMEPAGE="https://github.com/cjdelisle/cjdns"
 EGIT_REPO_URI="git://github.com/cjdelisle/cjdns.git \
                https://github.com/cjdelisle/cjdns.git"
 EGIT_COMMIT="78e13484b6639adacefc62eb7cf93ef7db4a936f"
