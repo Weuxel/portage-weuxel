@@ -34,6 +34,10 @@ pkg_setup() {
 	fi
 }
 
+src_prepare() {
+	epatch "${FILESDIR}/${P}-fix_systemd_units.patch"
+}
+
 src_compile() {
 	python-single-r1_pkg_setup
 	append-flags -Wno-error
@@ -42,6 +46,7 @@ src_compile() {
 
 src_install() {
 	systemd_dounit contrib/systemd/cjdns.service
+	systemd_dounit contrib/systemd/cjdns-resume.service
 	newinitd "${FILESDIR}/cjdns.runscript" cjdns
 
 	dodoc README.md
