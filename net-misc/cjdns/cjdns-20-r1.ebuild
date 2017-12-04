@@ -35,7 +35,7 @@ pkg_setup() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-fix_systemd_units.patch"
+	epatch "${FILESDIR}/${PN}-fix_systemd_units.patch"
 }
 
 src_compile() {
