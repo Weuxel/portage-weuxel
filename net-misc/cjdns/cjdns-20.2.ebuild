@@ -45,7 +45,7 @@ src_compile() {
 src_install() {
 	systemd_dounit contrib/systemd/cjdns.service
 	systemd_dounit contrib/systemd/cjdns-resume.service
-	newinitd "${FILESDIR}/cjdns.runscript" cjdns
+	newinitd contrib/openrc/cjdns cjdns
 
 	dodoc README.md
 	dosbin cjdroute
