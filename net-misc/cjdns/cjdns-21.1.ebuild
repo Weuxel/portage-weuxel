@@ -4,7 +4,7 @@
 
 EAPI=5
 
-PYTHON_COMPAT=( python{2_6,2_7} )
+PYTHON_COMPAT=( python{3_8,3_9} )
 
 inherit eutils git-r3 linux-info systemd python-single-r1 flag-o-matic
 
@@ -12,7 +12,7 @@ DESCRIPTION="Encrypted networking for regular people."
 HOMEPAGE="https://github.com/cjdelisle/cjdns"
 EGIT_REPO_URI="https://github.com/cjdelisle/cjdns.git"
 EGIT_BRANCH="master"
-EGIT_COMMIT="77259a49e5bc7ca7bc6dca5bd423e02be563bdc5"
+EGIT_COMMIT="403f68c3ec576a9d60acdd369dcd1e60751060a3"
 LICENSE="GPL-3"
 
 SLOT="0"
