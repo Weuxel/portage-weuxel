@@ -39,8 +39,7 @@ src_prepare() {
 src_compile() {
 	python-single-r1_pkg_setup
 	append-flags -Wno-error
-	#Seccomp_NO=1 ./do || die "./do failed"
-	./do
+	Seccomp_NO=1 ./do || die "./do failed"
 }
 
 src_install() {
